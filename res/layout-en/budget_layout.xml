@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+ <!-- Set interface for total income and income amount -->    
+    <TextView
+        android:id="@+id/total_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/total_income" />
+    
+    <TextView
+        android:id="@+id/income_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/total_expense"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/total_expense"
+        android:text="@string/income_amount" />
+    
+<!-- Set interface for total_expense and expense_amount -->
+   
+   <TextView
+        android:id="@+id/total_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/total_income"
+        android:text="@string/total_expense" />
+
+    <TextView
+        android:id="@+id/expense_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/total_expense"
+        android:layout_alignBottom="@+id/total_expense"
+        android:layout_alignLeft="@+id/income_amount"
+        android:text="@string/expense_amount" />
+    
+    <!-- Set interface for net_savings and save_amount -->
+
+    <TextView
+        android:id="@+id/net_saving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/total_expense"
+        android:text="@string/net_saving" />
+
+    <TextView
+        android:id="@+id/save_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/net_saving"
+        android:layout_alignBottom="@+id/net_saving"
+        android:layout_alignLeft="@+id/expense_amount"
+        android:text="@string/save_amount" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/net_saving"        
+        android:layout_marginTop="17dp" >
+    </ListView>
+    
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" 
+        android:layout_below="@+id/listView1"       
+        android:layout_above="@+id/add_category"
+        android:layout_marginTop="17dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/add_category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"        
+        android:text="@string/add_category" />
+
+</RelativeLayout>
